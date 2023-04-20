@@ -7,6 +7,13 @@
   resolved "https://registry.npmmirror.com/@babel/parser/-/parser-7.21.4.tgz"
   integrity sha512-alVJj7k7zIxqBZ7BTRhz0IqJFxW1VJbm6N8JbcYhQ186df9ZBPbZBmWSqAMXwHGsCJdYks7z/voa3ibiS5bCIw==
 
+"@babel/runtime@^7.10.5", "@babel/runtime@^7.7.2":
+  version "7.21.0"
+  resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.21.0.tgz#5b55c9d394e5fcf304909a8b00c07dc217b56673"
+  integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
+  dependencies:
+    regenerator-runtime "^0.13.11"
+
 "@esbuild/android-arm64@0.17.17":
   version "0.17.17"
   resolved "https://registry.npmmirror.com/@esbuild/android-arm64/-/android-arm64-0.17.17.tgz#164b054d58551f8856285f386e1a8f45d9ba3a31"
@@ -333,12 +340,24 @@ he@^1.2.0:
   resolved "https://registry.npmmirror.com/he/-/he-1.2.0.tgz"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+import-html-entry@^1.14.5:
+  version "1.14.6"
+  resolved "https://registry.npmmirror.com/import-html-entry/-/import-html-entry-1.14.6.tgz#6bf54930e074d8264cbd040dcefb92062a3093d7"
+  integrity sha512-5MQkbwIr8n/bXOoE05M5/Nm0lnHO46vnb3D6svSvtVwpDqwhd/X14zjLcU31QWZ6gL8rUXNzj6vKHx4yOUL6gQ==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+
 is-core-module@^2.11.0:
   version "2.12.0"
   resolved "https://registry.npmmirror.com/is-core-module/-/is-core-module-2.12.0.tgz"
   integrity sha512-RECHCBCd/viahWmwj6enj19sKbHfJrddi/6cBDsNTKbNq0f7VeaUkBo60BqzvPqo/W54ChS62Z5qyun7cfOMqQ==
   dependencies:
     has "^1.0.3"
+
+lodash@^4.17.11:
+  version "4.17.21"
+  resolved "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 magic-string@^0.25.7:
   version "0.25.9"
@@ -383,6 +402,21 @@ postcss@^8.1.10, postcss@^8.4.21:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+qiankun@^2.10.5:
+  version "2.10.5"
+  resolved "https://registry.npmmirror.com/qiankun/-/qiankun-2.10.5.tgz#fa00cd407adb18364d3d67b960d198967649c9e4"
+  integrity sha512-mNbneqQzdKXpgB1K/mCO3MIXsdXwzcvxU07cUQCSljeyga3LWlI9L+clirmoaj7+UK6tylhhVQ55RyFJngh3ZQ==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    import-html-entry "^1.14.5"
+    lodash "^4.17.11"
+    single-spa "^5.9.2"
+
+regenerator-runtime@^0.13.11:
+  version "0.13.11"
+  resolved "https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
+  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
 resolve@^1.22.1:
   version "1.22.2"
   resolved "https://registry.npmmirror.com/resolve/-/resolve-1.22.2.tgz"
@@ -398,6 +432,11 @@ rollup@^3.18.0:
   integrity sha512-2yEB3nQXp/tBQDN0hJScJQheXdvU2wFhh6ld7K/aiZ1vYcak6N/BKjY1QrU6BvO2JWYS8bEs14FRaxXosxy2zw==
   optionalDependencies:
     fsevents "~2.3.2"
+
+single-spa@^5.9.2:
+  version "5.9.4"
+  resolved "https://registry.npmmirror.com/single-spa/-/single-spa-5.9.4.tgz#2a995b0784867a3f60ceb458de295ee67f045077"
+  integrity sha512-QkEoh0AzGuU82qnbUUk0ydF78QbU5wMKqKKJn7uUQfBiOYlRQEfIOpLM4m23Sab+kTOLI1kbYhYeiQ7fX5KVVw==
 
 source-map-js@^1.0.2:
   version "1.0.2"
