@@ -20,7 +20,7 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.less', '.css'],
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.vue', '.json', '.less', '.css'],
     alias: [
       {
         find: 'vue-i18n',

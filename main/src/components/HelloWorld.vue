@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const count = ref(0)
+
 </script>
-
 <template>
-  <button type="button" @click="count++">count is {{ count }}</button>
+  <div style="display: flex;">
+    <el-menu router>
+      <el-menu-item index="/">Home</el-menu-item>
+      <el-menu-item index="/Login">Login</el-menu-item>
+      <el-menu-item index="/Detail">Detail</el-menu-item>
+    </el-menu>
+    <router-view />
+  </div>
 </template>
-
-<style scoped>
-</style>
+<style lang="less" scoped></style>

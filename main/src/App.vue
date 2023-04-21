@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
-import { useI18n } from 'vue-i18n';
-import HelloWorld from './components/HelloWorld.vue'
-const { t } = useI18n()
+import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
-  <el-config-provider :locale="zhCn">
-    <div>{{ t('login.username') }}</div>
+  <div style="display: flex;">
+    <el-menu router>
+      <el-menu-item index="/">main</el-menu-item>
+      <el-menu-item index="/sub-vue3">sub-vue3</el-menu-item>
+      <el-menu-item index="/sub-react">sub-react</el-menu-item>
+    </el-menu>
     <HelloWorld />
-  </el-config-provider>
+  </div>
+  <div id="sub-vue3" class="container" />
 </template>
 
-<style scoped lang="sass">
-</style>
+<style lang="scss" scoped></style>

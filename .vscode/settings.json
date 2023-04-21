@@ -22,5 +22,6 @@
         "vue",
         "react"
     ],
+    "vue.features.codeActions.enable": false,
     // "god.tsconfig": "./tsconfig.json"
 }
