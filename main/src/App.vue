@@ -11,7 +11,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
     </el-menu>
     <HelloWorld />
   </div>
-  <div id="sub-vue3" class="container" />
+  <div id="container" />
 </template>
 
 <style lang="scss" scoped></style>
