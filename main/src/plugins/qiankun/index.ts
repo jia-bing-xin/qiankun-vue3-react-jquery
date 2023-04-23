@@ -78,6 +78,12 @@ const qiankunStart = () => {
             experimentalStyleIsolation: true
         },
         singular: true, //是否为单实例场景
+        fetch(url, options) {
+            if (url.startsWith('/api')) {
+                return fetch(`https://api.example.com${url}`, options);
+            }
+            return fetch(url, options);
+        },
     }
     start(startOpts)
 
