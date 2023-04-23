@@ -1,17 +1,12 @@
-import { App, createApp } from 'vue'
-import { renderWithQiankun, qiankunWindow, QiankunProps } from 'vite-plugin-qiankun/dist/helper';
-import './style.css'
+// 初始化样式
+import "@/plugins/normalize"
+import { createApp } from 'vue'
+import type { App as app } from "vue";
+import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helper';
 import App from './App.vue'
 
-// 定义渲染函数
-// function render(props: any) {
-//     const { container } = props;
-//     // 挂载应用
-// createApp(App).mount(container);
-// }
-
-let instance: App<Element> | null = null;
-function render(props = {}) {
+let instance: app<Element> | null;
+function render(props: any = {}) {
     const { container } = props;
     instance = createApp(App);
     //   instance.use(store);
@@ -24,18 +19,20 @@ renderWithQiankun({
     mount(props) {
         console.log("viteapp mount");
         render(props);
-        // console.log(instance.config.globalProperties.$route,"444444444");
     },
     bootstrap() {
         console.log('bootstrap');
     },
     unmount() {
         console.log("vite被卸载了");
-        instance.unmount();
-        // instance._container.innerHTML = '';
+        instance?.unmount();
         instance = null;
     },
-    update: function (props: QiankunProps): void | Promise<void> {
+    update: function (): void | Promise<void> {
         throw new Error('Function not implemented.');
     }
 });
+if (!qiankunWindow.__POWERED_BY_QIANKUN__) {
+    render()
+    console.log('我不是作为子应用运行')
+}

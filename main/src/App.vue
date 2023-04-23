@@ -10,8 +10,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
       <el-menu-item index="/sub-react">sub-react</el-menu-item>
     </el-menu>
     <HelloWorld />
+    <div id="container" />
   </div>
-  <div id="container" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -15,6 +15,6 @@ const apps = [
 ];
 const qiankunStart = () => {
     registerMicroApps(apps)
-    start()
+    start({ sandbox: { experimentalStyleIsolation: true } })
 }
 export default qiankunStart

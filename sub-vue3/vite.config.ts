@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import qiankun from 'vite-plugin-qiankun';
+import path from "path";
 
 // useDevMode 开启时与热更新插件冲突
 const useDevMode = true
@@ -11,6 +12,19 @@ export default defineConfig({
     vue(),
     qiankun('vue3Vite', { useDevMode })
   ],
+  resolve: {
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.vue', '.json', '.less', '.css'],
+    alias: [
+      {
+        find: 'vue-i18n',
+        replacement: 'vue-i18n/dist/vue-i18n.cjs.js', //解决i8n警告
+      },
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, "src"),
+      },
+    ]
+  },
   build: {
     lib: {
       entry: 'src/main.ts',
