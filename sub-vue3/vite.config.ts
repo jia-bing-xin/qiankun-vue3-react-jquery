@@ -10,7 +10,7 @@ const useDevMode = true
 export default defineConfig({
   plugins: [
     vue(),
-    qiankun('vue3Vite', { useDevMode })
+    qiankun('sub-vue3', { useDevMode })
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.vue', '.json', '.less', '.css'],

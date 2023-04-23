@@ -8,6 +8,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
       <el-menu-item index="/">main</el-menu-item>
       <el-menu-item index="/sub-vue3">sub-vue3</el-menu-item>
       <el-menu-item index="/sub-react">sub-react</el-menu-item>
+      <el-menu-item index="/sub-jquery">sub-jquery</el-menu-item>
     </el-menu>
     <HelloWorld />
     <div id="container" />
