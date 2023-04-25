@@ -1,14 +1,15 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// import react from '@vitejs/plugin-react'
 import qiankun from 'vite-plugin-qiankun';
 import path from "path";
 
 // useDevMode 开启时与热更新插件冲突
 const useDevMode = true
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
+    // react(),
     qiankun('sub-react', { useDevMode })
   ],
   resolve: {
